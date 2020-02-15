@@ -1,12 +1,10 @@
 <div class="container mx-auto text-center">
   <div class="row">
     <div class="col-6 offset-3">
-      <h1 class="fade" [ngClass]="{show: showHeader}">
-        Doug Keller
-      </h1>
+      <h1>Doug Keller</h1>
 
-      <p class="lead fade" [ngClass]="{show: showContent}">
-        Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
+      <p class="lead">
+        <span *ngFor="let text of gradientTexts; index as i" class="p-1 fade" [ngClass]="{ show: showTexts[i] }">{{ text }}</span>
       </p>
     </div>
   </div>

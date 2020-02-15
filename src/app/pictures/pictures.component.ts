@@ -10,6 +10,8 @@ export class PicturesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    document.body.setAttribute('style', "background-image: none");
   }
 
 }
