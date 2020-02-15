@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackgroundService } from '../services/background/background.service';
 
 @Component({
   selector: 'dk-home',
@@ -7,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private backgroundService: BackgroundService) {
+    backgroundService.setBackground('yosemite');
+  }
 
   showHeader?: Boolean;
 
   gradientTexts: Array<String> = [
     'Funny.',
     'Smart.',
-    'Cool.'
+    'Handsome.'
   ];
   showTexts: Array<Boolean> = [];
 
@@ -26,8 +29,5 @@ export class HomeComponent implements OnInit {
       let delay = 750 * (i + 2);
       setTimeout(() => this.showTexts[i] = true, delay);
     });
-
-    document.body.setAttribute('style', "background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg')");
   }
-
 }

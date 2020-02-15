@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackgroundService } from '../services/background/background.service';
 
 @Component({
   selector: 'dk-pictures',
@@ -7,11 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PicturesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-    document.body.setAttribute('style', "background-image: none");
+  constructor(private backgroundService: BackgroundService) {
+    backgroundService.setBackground('doug');
   }
+
+  ngOnInit(): void {}
 
 }

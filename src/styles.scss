@@ -44,3 +44,15 @@ a:hover {
   background-color: $white;
   border: .05rem solid $white;
 }
+
+body.dynamic-background {
+  background-image: none;
+
+  &.yosemite {
+    background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg') !important;
+  }
+
+  &.doug {
+    background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
+  }
+}
