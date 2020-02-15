@@ -1,3 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+$primary:       #9eb5ba;
+$success:       #65b170;
+$info:          #4486a8;
+$warning:       #e2a138;
+$danger:        #f44336;
+
+$body-bg: #333;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: $white;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg');
+}
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: $white;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; // Prevent inheritance from `body`
+  background-color: $white;
+  border: .05rem solid $white;
+}
