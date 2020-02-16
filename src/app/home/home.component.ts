@@ -19,15 +19,16 @@ export class HomeComponent implements OnInit {
     'Smart.',
     'Handsome.'
   ];
-  showTexts: Array<Boolean> = [];
+  textsToShow: number = 0;
 
   ngOnInit(): void {
     setTimeout(() => this.showHeader = true, 0);
 
-    this.gradientTexts.forEach((_v, i) => {
-      this.showTexts[i] = false;
-      let delay = 750 * (i + 2);
-      setTimeout(() => this.showTexts[i] = true, delay);
-    });
+    let interval = setInterval(() => {
+      this.textsToShow += 1;
+      if (this.textsToShow >= this.gradientTexts.length) {
+        clearInterval(interval);
+      }
+    }, 750);
   }
 }

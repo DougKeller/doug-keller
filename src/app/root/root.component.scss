@@ -7,3 +7,56 @@
   width: 100%;
   margin: auto;
 }
+
+/*
+ * Parallax Layers
+ * Source: https://keithclark.co.uk/articles/pure-css-parallax-websites/
+ */
+
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@mixin parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-background {
+  @include parallax-layer;
+
+  transform: translateZ(-2px) scale(3);
+}
+.parallax-foreground {
+  @include parallax-layer;
+
+  transform: translateZ(0);
+}
+
+.dynamic-background {
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.yosemite {
+    background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg') !important;
+  }
+
+  &.doug {
+    background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
+  }
+
+  &.cas {
+    background-image: url('https://www.doug-keller.com/public/images/cas.jpg');
+  }
+
+  &.code {
+    background-image: url('https://www.doug-keller.com/public/images/code.jpg');
+  }
+}

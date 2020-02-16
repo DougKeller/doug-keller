@@ -8,20 +8,41 @@ $body-bg: #333;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Responsive Typography
+html {
+  font-size: 0.8rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.0rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.0rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.0rem;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.text-float {
   color: $white;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 /*
@@ -43,24 +64,4 @@ a:hover {
   text-shadow: none; // Prevent inheritance from `body`
   background-color: $white;
   border: .05rem solid $white;
-}
-
-body.dynamic-background {
-  background-image: none;
-
-  &.yosemite {
-    background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg') !important;
-  }
-
-  &.doug {
-    background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
-  }
-
-  &.cas {
-    background-image: url('https://www.doug-keller.com/public/images/cas.jpg');
-  }
-
-  &.code {
-    background-image: url('https://www.doug-keller.com/public/images/code.jpg');
-  }
 }

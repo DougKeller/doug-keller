@@ -1,11 +1,63 @@
-<div class="container mx-auto text-center">
+<div class="home-title container text-center text-float vh-100">
   <div class="row">
-    <div class="col-6 offset-3">
-      <h1>Doug Keller</h1>
+    <div class="col-lg-6 offset-lg-3">
+      <h1 class="display-3">Doug Keller</h1>
 
-      <p class="lead">
-        <span *ngFor="let text of gradientTexts; index as i" class="p-1 fade" [ngClass]="{ show: showTexts[i] }">{{ text }}</span>
-      </p>
+      <ul class="list-inline">
+        <li class="list-inline-item fade" *ngFor="let text of gradientTexts; index as i" [ngClass]="{ show: textsToShow > i }">
+          <span class="lead font-weight-normal">{{ text }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          About
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          About
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          About
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+          <p class="card-text">
+            Blah blah blah.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,13 +1,19 @@
-<div class="container w-100 h-100 d-flex flex-column">
-  <header class="mb-auto">
-    <dk-header></dk-header>
-  </header>
+<div class="parallax-container">
+  <div class="parallax-background dynamic-background"></div>
 
-  <main role="main">
-    <router-outlet></router-outlet>
-  </main>
+  <div class="parallax-foreground">
+    <div class="container w-100 h-100 d-flex flex-column">
+      <header>
+        <dk-header></dk-header>
+      </header>
 
-  <footer class="mt-auto">
-    <dk-footer></dk-footer>
-  </footer>
+      <main role="main" class="mt-auto mb-auto">
+        <router-outlet></router-outlet>
+      </main>
+
+      <footer>
+        <dk-footer></dk-footer>
+      </footer>
+    </div>
+  </div>
 </div>
