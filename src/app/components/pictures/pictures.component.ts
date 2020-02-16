@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BackgroundService } from '../services/background/background.service';
+import { BackgroundService } from '@dk-services/background/background.service';
 
 @Component({
   selector: 'dk-pictures',
