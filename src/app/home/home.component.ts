@@ -15,9 +15,8 @@ export class HomeComponent implements OnInit {
   showHeader?: Boolean;
 
   gradientTexts: Array<String> = [
-    'Funny.',
-    'Smart.',
-    'Handsome.'
+    'Software Engineer',
+    'Canton, OH'
   ];
   textsToShow: number = 0;
 

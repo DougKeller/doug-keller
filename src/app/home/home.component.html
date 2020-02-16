@@ -3,11 +3,19 @@
     <div class="col-lg-6 offset-lg-3">
       <h1 class="display-3">Doug Keller</h1>
 
-      <ul class="list-inline">
-        <li class="list-inline-item fade" *ngFor="let text of gradientTexts; index as i" [ngClass]="{ show: textsToShow > i }">
-          <span class="lead font-weight-normal">{{ text }}</span>
-        </li>
+      <ul class="list-inline text-lowercase">
+        <ng-container *ngFor="let text of gradientTexts; index as i, first as $first">
+          <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }" *ngIf="!$first">&middot;</li>
+          <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }">
+            <span class="lead font-weight-normal">{{ text }}</span>
+          </li>
+        </ng-container>
       </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a class="jump-to-link" (click)="content.scrollIntoView({behavior:'smooth',block:'start',inline:'nearest'})"><i class="fa fa-chevron-down"></i></a>
     </div>
   </div>
 </div>
@@ -15,7 +23,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <div class="card">
+      <div class="card" #content>
         <div class="card-header">
           About
         </div>
