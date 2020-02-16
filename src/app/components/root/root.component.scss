@@ -37,7 +37,13 @@
 .parallax-background {
   @include parallax-layer;
 
-  transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3.03);
+}
+
+.parallax-background {
+  @include parallax-layer;
+
+  transform: translateZ(-2px) scale(3.03);
 }
 .parallax-base {
   @include parallax-layer;
@@ -49,9 +55,10 @@
   background-image: none;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   &.yosemite {
-    background-image: url('https://www.tripsavvy.com/thmb/UYMMWT9tevtUn7h5wXyxQKDjp1E=/4563x2978/filters:fill(auto,1)/valley-view-of-yosemite-920518860-5beb055446e0fb00268831ae.jpg') !important;
+    background-image: url('../../../assets/doug_ca_bridge.jpg');
   }
 
   &.doug {
