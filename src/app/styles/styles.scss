@@ -6,7 +6,8 @@ $danger:        #f44336;
 
 $body-bg: #333;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import './parallax';
 
 // Responsive Typography
 html {
