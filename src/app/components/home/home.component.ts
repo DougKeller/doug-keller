@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BackgroundService } from '@dk-services/background/background.service';
 
 @Component({
   selector: 'dk-home',
@@ -7,11 +6,6 @@ import { BackgroundService } from '@dk-services/background/background.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private backgroundService: BackgroundService) {
-    backgroundService.setBackground('yosemite');
-  }
-
   gradientTexts: Array<String> = [
     'Software Engineer',
     'Canton, OH'

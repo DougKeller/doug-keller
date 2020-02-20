@@ -24,19 +24,14 @@
   left: 0;
 }
 
-.parallax-background {
-  @include parallax-layer;
-
-  transform: translateZ(-2px) scale(3.03);
-}
-
-.parallax-background {
-  @include parallax-layer;
-
-  transform: translateZ(-2px) scale(3.03);
-}
 .parallax-base {
   @include parallax-layer;
 
   transform: translateZ(0);
+}
+
+.parallax-background {
+  @include parallax-layer;
+
+  transform: translateZ(-2px) scale(3);
 }

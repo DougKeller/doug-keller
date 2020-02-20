@@ -6,31 +6,11 @@ $danger:        #f44336;
 
 $body-bg: #333;
 
+$enable-responsive-font-sizes: true;
+
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import './parallax';
-
-// Responsive Typography
-html {
-  font-size: 0.8rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.0rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.0rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.0rem;
-  }
-}
+@import './background';
 
 html,
 body {
@@ -45,25 +25,4 @@ body {
 .text-float {
   color: $white;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-}
-
-/*
- * Globals
- */
-
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: $white;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; // Prevent inheritance from `body`
-  background-color: $white;
-  border: .05rem solid $white;
 }

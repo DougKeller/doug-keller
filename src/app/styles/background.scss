@@ -1,0 +1,25 @@
+@mixin background-preset {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-yosemite {
+  @include background-preset;
+  background-image: url('../../assets/doug_ca_bridge.jpg');
+}
+
+.bg-doug {
+  @include background-preset;
+  background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
+}
+
+.bg-cas {
+  @include background-preset;
+  background-image: url('https://www.doug-keller.com/public/images/cas.jpg');
+}
+
+.bg-code {
+  @include background-preset;
+  background-image: url('https://www.doug-keller.com/public/images/code.jpg');
+}

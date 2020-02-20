@@ -1,63 +1,101 @@
-<div class="home-title container text-center text-float vh-100">
-  <div class="row">
-    <div class="col-lg-6 offset-lg-3">
-      <h1 class="display-3">Doug Keller</h1>
+<div class="parallax-container">
+  <div class="parallax-group">
+    <div class="parallax-background bg-yosemite"></div>
 
-      <ul class="list-inline text-lowercase">
-        <ng-container *ngFor="let text of gradientTexts; index as i, first as $first">
-          <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }" *ngIf="!$first">&middot;</li>
-          <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }">
-            <span class="lead font-weight-normal">{{ text }}</span>
-          </li>
-        </ng-container>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <a class="jump-to-link" (click)="scrollToElement(content)"><i class="fa fa-chevron-down"></i></a>
-    </div>
-  </div>
-</div>
+    <div class="parallax-base">
+      <div class="container">
+        <header>
+          <dk-header></dk-header>
+        </header>
 
-<div class="vh-100">
-  <div class="card" #content>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-lg-3 text-center">
-          <img class="rounded" src="https://media-exp1.licdn.com/dms/image/C5603AQEo4GWA908gKw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=3ejhxTmTCEpCTCRqnXgD1Imbe7kYwtA8u9zrAG6ekHE" />
-        </div>
-        <div class="col-lg">
-          <h5 class="card-title mt-3">About Me</h5>
-          <p class="card-text">
-            I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
-          </p>
-          <p class="card-text">
-            I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
-          </p>
-        </div>
+        <main role="main" class="mt-auto mb-auto">
+          <div class="home-title container text-center text-float vh-100">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <h1 class="display-3">Doug Keller</h1>
+
+                <ul class="list-inline text-lowercase">
+                  <ng-container *ngFor="let text of gradientTexts; index as i, first as $first">
+                    <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }" *ngIf="!$first">&middot;</li>
+                    <li class="list-inline-item fade" [ngClass]="{ show: textsToShow > i }">
+                      <span class="lead font-weight-normal">{{ text }}</span>
+                    </li>
+                  </ng-container>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="jump-to-link" (click)="scrollToElement(content)"><i class="fa fa-chevron-down"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 offset-md-1">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-center mb-3">
+                      <img class="rounded" width="100%" src="https://media-exp1.licdn.com/dms/image/C5603AQEo4GWA908gKw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=3ejhxTmTCEpCTCRqnXgD1Imbe7kYwtA8u9zrAG6ekHE" />
+                    </div>
+
+                    <h5 class="card-title">Doug Keller</h5>
+                    <h6 class="card-subtitle text-muted mb-2">Software Engineer</h6>
+                    <h6 class="card-subtitle text-muted mb-2">Team Lead</h6>
+
+                    <div class="w-100 d-flex justify-content-center">
+                      <a class="card-link mx-2" href="https://github.com/DougKeller" target="_blank"><i class="fa fa-github"></i></a>
+                      <a class="card-link mx-2" href="https://github.com/DougKeller" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      <a class="card-link mx-2" href="mailto:dkeller4113@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-7" #content>
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+
+                    <p class="card-text">
+                      I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
+                    </p>
+
+                    <p class="card-text">
+                      I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
+                    </p>
+
+                    <h5 class="card-title mt-3">Education</h5>
+
+                    <p class="card-text">
+                      I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
+                    </p>
+
+                    <p class="card-text">
+                      I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer>
+          <dk-footer></dk-footer>
+        </footer>
       </div>
     </div>
   </div>
-</div>
+<!--
 
-<div class="vh-100">
-  <div class="card" #content>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-lg">
-          <h5 class="card-title mt-3">Education</h5>
-          <p class="card-text">
-            I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
-          </p>
-          <p class="card-text">
-            I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
-          </p>
-        </div>
-        <div class="col-lg-3 text-center">
-          <img class="rounded" src="https://media-exp1.licdn.com/dms/image/C5603AQEo4GWA908gKw/profile-displayphoto-shrink_200_200/0?e=1587600000&v=beta&t=3ejhxTmTCEpCTCRqnXgD1Imbe7kYwtA8u9zrAG6ekHE" />
-        </div>
-      </div>
+  <div class="parallax-group"></div>
+
+  <div class="parallax-group">
+    <div class="parallax-deep"></div>
+
+    <div class="parallax-base">
     </div>
-  </div>
+  </div> -->
 </div>

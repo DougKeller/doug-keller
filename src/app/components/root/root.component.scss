@@ -7,26 +7,3 @@
   width: 100%;
   margin: auto;
 }
-
-.dynamic-background {
-  background-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &.yosemite {
-    background-image: url('../../../assets/doug_ca_bridge.jpg');
-  }
-
-  &.doug {
-    background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
-  }
-
-  &.cas {
-    background-image: url('https://www.doug-keller.com/public/images/cas.jpg');
-  }
-
-  &.code {
-    background-image: url('https://www.doug-keller.com/public/images/code.jpg');
-  }
-}
