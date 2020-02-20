@@ -9,6 +9,11 @@
   background-image: url('../../assets/doug_ca_bridge.jpg');
 }
 
+.bg-tunnel-view {
+  @include background-preset;
+  background-image: url('../../assets/tunnel_view.jpg');
+}
+
 .bg-doug {
   @include background-preset;
   background-image: url('https://www.doug-keller.com/public/images/doug.jpg');
