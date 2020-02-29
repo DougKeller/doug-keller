@@ -49,13 +49,13 @@ export class HomeComponent implements OnInit {
             titleLeft: 'UA Department of Electrical Engineering',
             titleRight: '2017',
             subtitle: 'Software Engineer Intern',
-            description: 'Created an interactive web interface for viewing and downloading FitBit heartrate data using Node, ExpressJS, and AngularJS.'
+            description: 'Created an interactive web interface for viewing and exporting Fitbit heartrate data using Node, ExpressJS, and AngularJS.'
           },
           {
             titleLeft: 'Patriot Software',
             titleRight: '2015 - 2017',
             subtitle: 'Software Engineer Intern',
-            description: 'Assisted in writing a new version of Big Biller - an applicant-tracking software for independent recruiting firms.'
+            description: 'Assisted in a complete rewrite of Big Biller - an applicant-tracking software for independent recruiting firms.'
           }
         ]
       },
@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit {
         items: [
           {
             titleLeft: 'The University of Akron',
-            titleRight: 'Graduated 2017',
-            subtitle: 'BSCS - Computer Science',
-            description: 'Finished Summa Cum Laude with a major in Computer Science and a minor in Mathematics'
+            titleRight: '2013 - 2017',
+            subtitle: 'Bachelor of Science',
+            description: 'Graduated Summa Cum Laude with a major in Computer Science and a minor in Mathematics'
           }
         ]
       },
@@ -74,10 +74,20 @@ export class HomeComponent implements OnInit {
         category: 'Skills',
         list: [
           'AngularJS',
+          'Angular',
           'Ruby on Rails',
           'Amazon Web Services',
           'Docker Compose',
-          'Jenkins'
+          'Jenkins',
+          'PostgreSQL',
+          'Node',
+          'Solr',
+          'ASP.NET',
+          'C++',
+          'C#',
+          'Typescript',
+          'CSS',
+          'Swift'
         ]
       }
     ];

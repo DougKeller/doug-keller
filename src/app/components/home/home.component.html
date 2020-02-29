@@ -56,14 +56,14 @@
               <div class="col-md-9 accordion" #content>
                 <div class="card" *ngFor="let datum of data; first as $first">
                   <div class="card-header">
-                    <h4 class="mb-0">{{ datum.category }}</h4>
+                    <h4 class="mb-0" id="{{ datum.category.toLowerCase() }}">{{ datum.category }}</h4>
                   </div>
 
                   <div class="card-body">
                     <p *ngFor="let paragraph of datum.paragraphs; last as $lastParagraph" class="pl-3 pr-3" [ngClass]="{ 'mb-0': $lastParagraph }">{{ paragraph }}</p>
 
                     <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline mb-0">
-                      <li *ngFor="let text of datum.list" class="list-inline-item">{{ text }}</li>
+                      <li *ngFor="let text of datum.list" class="list-inline-item chiclet" [ngClass]="{ proficient: true }">{{ text }}</li>
                     </ul>
 
                     <ng-container *ngFor="let item of datum.items; first as $firstItem">

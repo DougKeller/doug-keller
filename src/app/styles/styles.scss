@@ -26,3 +26,17 @@ body {
   color: $white;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
+
+.chiclet {
+  border: solid 1px #eee;
+  border-radius: 4px;
+  padding: 0 .5rem 0 .5rem;
+  font-size: .9rem;
+  margin: 0.2rem;
+  background: #eee;
+
+  &.proficient {
+    border-color: lighten($info, 25%);
+    background: lighten($info, 25%);
+  }
+}
