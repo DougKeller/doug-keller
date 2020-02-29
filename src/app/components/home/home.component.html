@@ -60,9 +60,9 @@
                   </div>
 
                   <div class="card-body">
-                    <p *ngFor="let paragraph of datum.paragraphs" class="pl-3 pr-3">{{ paragraph }}</p>
+                    <p *ngFor="let paragraph of datum.paragraphs; last as $lastParagraph" class="pl-3 pr-3" [ngClass]="{ 'mb-0': $lastParagraph }">{{ paragraph }}</p>
 
-                    <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline">
+                    <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline mb-0">
                       <li *ngFor="let text of datum.list" class="list-inline-item">{{ text }}</li>
                     </ul>
 
