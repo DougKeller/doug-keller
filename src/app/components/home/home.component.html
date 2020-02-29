@@ -53,32 +53,28 @@
                 </div>
               </div>
 
-              <div class="col-md-7" #content>
-                <div class="card h-100">
+              <div class="col-md-7 accordion" #content>
+                <div class="card" *ngFor="let datum of data; first as $first">
+                  <div class="card-header">
+                    <h4 class="mb-0">{{ datum.category }}</h4>
+                  </div>
+
                   <div class="card-body">
-                    <ng-container *ngFor="let datum of data">
-                      <h4 class="card-title mt-3">{{ datum.category }}</h4>
+                    <p *ngFor="let paragraph of datum.paragraphs" class="pl-3 pr-3">{{ paragraph }}</p>
 
-                      <p *ngFor="let paragraph of datum.paragraphs" class="pl-3 pr-3">
-                        {{ paragraph }}
-                      </p>
+                    <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline">
+                      <li *ngFor="let text of datum.list" class="list-inline-item">{{ text }}</li>
+                    </ul>
 
-                      <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline">
-                        <li *ngFor="let text of datum.list" class="list-inline-item">
-                          {{ text }}
-                        </li>
-                      </ul>
+                    <ng-container *ngFor="let item of datum.items; first as $firstItem">
+                      <div *ngIf="item.titleLeft || item.titleRight" class="d-flex justify-content-between align-items-center" [ngClass]="{ 'mt-3': !$firstItem }">
+                        <span *ngIf="item.titleLeft" class="lead">{{ item.titleLeft }}</span>
+                        <span *ngIf="item.titleRight" class="text-muted">{{ item.titleRight }}</span>
+                      </div>
 
-                      <ng-container *ngFor="let item of datum.items">
-                        <div *ngIf="item.titleLeft || item.titleRight" class="d-flex justify-content-between align-items-center mt-3">
-                          <span *ngIf="item.titleLeft" class="lead">{{ item.titleLeft }}</span>
-                          <span *ngIf="item.titleRight" class="text-muted">{{ item.titleRight }}</span>
-                        </div>
+                      <span *ngIf="item.subtitle">{{ item.subtitle }}</span>
 
-                        <span *ngIf="item.subtitle">{{ item.subtitle }}</span>
-
-                        <p *ngIf="item.description" class="card-text">{{ item.description }}</p>
-                      </ng-container>
+                      <p *ngIf="item.description" class="card-text text-muted pl-3">{{ item.description }}</p>
                     </ng-container>
                   </div>
                 </div>
