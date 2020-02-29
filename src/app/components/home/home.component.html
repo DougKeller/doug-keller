@@ -56,25 +56,30 @@
               <div class="col-md-7" #content>
                 <div class="card h-100">
                   <div class="card-body">
-                    <h5 class="card-title">About Me</h5>
+                    <ng-container *ngFor="let datum of data">
+                      <h4 class="card-title mt-3">{{ datum.category }}</h4>
 
-                    <p class="card-text">
-                      I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
-                    </p>
+                      <p *ngFor="let paragraph of datum.paragraphs" class="pl-3 pr-3">
+                        {{ paragraph }}
+                      </p>
 
-                    <p class="card-text">
-                      I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
-                    </p>
+                      <ul *ngIf="datum.list && datum.list.length > 0" class="list-inline">
+                        <li *ngFor="let text of datum.list" class="list-inline-item">
+                          {{ text }}
+                        </li>
+                      </ul>
 
-                    <h5 class="card-title mt-3">Education</h5>
+                      <ng-container *ngFor="let item of datum.items">
+                        <div *ngIf="item.titleLeft || item.titleRight" class="d-flex justify-content-between align-items-center mt-3">
+                          <span *ngIf="item.titleLeft" class="lead">{{ item.titleLeft }}</span>
+                          <span *ngIf="item.titleRight" class="text-muted">{{ item.titleRight }}</span>
+                        </div>
 
-                    <p class="card-text">
-                      I am a full-stack software engineer and team lead with specializations in Ruby on Rails and AngularJS. I have experience with continuous integration deployment to AWS via Jenkins and containerization via Docker.
-                    </p>
+                        <span *ngIf="item.subtitle">{{ item.subtitle }}</span>
 
-                    <p class="card-text">
-                      I am currently working on Big Biller, an applicant-tracking software for independent recruiting firms that uses Solr for full-text searching resumes to help recruiters make job placements.
-                    </p>
+                        <p *ngIf="item.description" class="card-text">{{ item.description }}</p>
+                      </ng-container>
+                    </ng-container>
                   </div>
                 </div>
               </div>
@@ -88,14 +93,4 @@
       </div>
     </div>
   </div>
-<!--
-
-  <div class="parallax-group"></div>
-
-  <div class="parallax-group">
-    <div class="parallax-deep"></div>
-
-    <div class="parallax-base">
-    </div>
-  </div> -->
 </div>
